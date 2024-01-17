@@ -1,7 +1,7 @@
 # Sky_to_Solar
 
 ### 팀원
-sosomm20141212(PL), kty0910, damhyang, notrowing, whrkdud
+sosomm20141212(PL), kty0910, damhyang, notrowing, whrkdud, SSunkist
 
 ### 프로젝트 소개
 KepcoA Sprint II 1조 / 하늘사진을 통한 태양광 에너지 생산량 예측 딥러닝 웹구현
