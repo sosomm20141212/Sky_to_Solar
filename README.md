@@ -1,5 +1,6 @@
 # Sky_to_Solar
 
+### 팀원
 sosomm20141212(PL), kty0910, damhyang, notrowing, whrkdud
 
 ### 프로젝트 소개
