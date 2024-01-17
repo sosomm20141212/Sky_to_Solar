@@ -6,7 +6,7 @@ sosomm20141212(PL), kty0910, damhyang, notrowing, whrkdud
 KepcoA Sprint II 1조 / 하늘사진을 통한 태양광 에너지 생산량 예측 딥러닝 웹구현
 
 ### 주요 기능
-
+사용자가 웹에 사진을 올리면 올려진 사진을 통하여 사진이 찍힌 날의 태양광 에너지 생산량을 예측 
 
 ### 라이센스
 이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 [LICENSE](LICENSE)를 참조하세요.
