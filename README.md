@@ -1,5 +1,5 @@
 # Project Name : Sky_to_Solar
-## Team Sunrise
+## Team Sunrise ☀️
 
 ### 팀원
 sosomm20141212(PL), kty0910, damhyang, notrowing, whrkdud, SSunkist
