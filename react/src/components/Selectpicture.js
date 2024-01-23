@@ -98,46 +98,52 @@ function Selectpicture() {
   return (
     <div className='select_picture'>
       <section>
-        <div>
+        <div className='select_box'>
           <div>
             <h2>하늘 사진 입력</h2>
           </div>
+        
+
+          <div className='picture_label'>
+            <div  className={`fileSelect${isActive ? 'active':''}`}
+                    onDragEnter={handleDragstart}
+                    onDragLeave={handleDragEnd}
+                    onDragOver={handleDragOver}
+                    onDrop={handleDrop}>
+
+                <label> 
+                  <input id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
+                      {uploadedInfo &&( 
+                        <>
+                          <div className="preview_info">
+                              <div>
+                                <img src = {uploadedInfo.imageUrl} className='showPicture'/> 
+                              </div>
+                                <button onClick={(e) => {
+                                  ImageSave();
+                                  e.preventDefault();
+                                }}> 결과 확인 </button>
+                          </div>
+                        </>
+                      )}
+
+                      {!uploadedInfo&&( 
+                        <>
+                          <div>사진 파일 선택</div>
+                          <div><InputfileLogo/></div>
+                          <div>클릭 혹은 파일을 이곳에 드롭하세요.</div>
+                        </>
+                      )}
+                </label>
+            </div>
+              
+            <div className='pictureInput_agree'>
+              <p>파일이 Sky to Solar서버에서 안전하게 처리됩니다.</p>
+              <p>이 서비스를 사용하면 Sky to Solar <span>사용 약관</span>에 동의하게 됩니다.</p>
+            </div>
+          </div>
         </div>
-
-        <div  className={`fileSelect${isActive ? 'active':''}`}
-              onDragEnter={handleDragstart}
-              onDragLeave={handleDragEnd}
-              onDragOver={handleDragOver}
-              onDrop={handleDrop}>
-
-          <label> 
-            <input id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
-                {uploadedInfo &&( 
-                  <>
-                    <div className="preview_info">
-                        <div>
-                          <img src = {uploadedInfo.imageUrl} className='showPicture'/> 
-                        </div>
-                          <button onClick={(e) => {
-                            ImageSave();
-                            e.preventDefault();
-                          }}> 결과 확인 </button>
-                    </div>
-                  </>
-                )}
-
-                {!uploadedInfo&&( 
-                  <>
-                    <div>사진 파일 선택</div>
-                    <div><InputfileLogo/></div>
-                    <div>클릭 혹은 파일을 이곳에 드롭하세요.</div>
-                  </>
-                )}
-          </label>
-        </div>
-      
       </section>
-
     </div>
 
   );
