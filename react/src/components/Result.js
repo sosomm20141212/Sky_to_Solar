@@ -13,7 +13,11 @@ function Result() {
 
     // 일조량 -> 건전지(에너자이저) 변환
     // (1000*(일사량*패널효율*시간)/건전지 전압)/건전지 용량
-    const battery = Math.round((1000*(wat*0.1*60)/1.5)/2850);
+    const wat_low = (wat-1)*1000;
+    const wat_high = wat*1000;
+
+    const battery_low = Math.round((1000*(wat_low*0.1*60)/1.5)/2850);
+    const battery_high = Math.round((1000*(wat_high*0.1*60)/1.5)/2850);
 
     return (
         <div className="result_component">
@@ -48,7 +52,7 @@ function Result() {
                             </div>
 
                             <div className="result_energy_middle">
-                                {wat || ''} W/m²
+                            {wat_low || '0'} ~ {wat_high || '0'} W/m²
                             </div>
 
                             <div className="result_energy_bottom">
@@ -62,7 +66,7 @@ function Result() {
                             </div>
 
                             <div className="use_energy_middle">
-                                {battery}
+                            {battery_low || '0'} ~ {battery_high || '0'}
                             </div>
 
                             <div className="use_energy_bottom">
