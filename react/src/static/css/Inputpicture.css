@@ -1,0 +1,11 @@
+/* 예시 페이지의 가독성을 위해 가운데 정렬, 수정해야함 */
+.InputPicture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 예시 사진의 크기 조절을 위해 작성, 수정해야함 */
+#howtoInput_imgex{
+    width: 50dvw;
+    height: 50dvh;
+}

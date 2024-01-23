@@ -1,0 +1,31 @@
+/* 사진 끌어오기 테스트를 위한 css 입니다. 차후 수정해야함! */
+
+.InputfileLogo{
+    width: 15dvw;
+    height: 15dvh;
+    pointer-events: none;
+}
+
+.fileSelect{
+    border: dashed 3px #eee;
+    width: 50dvw;
+}
+
+.fileSelect:hover{
+    border: dashed 3px #111;
+}
+
+.fileSelectactive{
+    background-color:#f4f8ff;
+    border: dashed 3px #111;
+    width: 50dvw;
+}
+
+#fileUpload{
+    display: none;
+}
+
+.showPicture{
+    width: 50dvw;
+    height: 50dvh;
+}
