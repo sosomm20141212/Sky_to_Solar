@@ -1,0 +1,101 @@
+/* 사진 끌어오기 테스트를 위한 css 입니다. 차후 수정해야함! */
+
+.select_picture{
+    background-color: #91A7D0;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select_box{
+    background-color: white;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    top: 25px;
+}
+
+.fileSelect>label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 50%; */
+}
+
+.InputfileLogo{
+    width: 10dvw;
+    height: 10dvh;
+    pointer-events: none;
+    margin: 10px 0px;
+}
+
+.fileSelect{
+    border: dashed 3px #eee;
+    border-radius: 5px;
+    width: 50dvw;
+    /* height: 350px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.fileSelect:hover{
+    border: dashed 3px gray;
+}
+
+.fileSelectactive{
+    background-color:#f4f8ff;
+    border: dashed 3px #111;
+    width: 50dvw;
+}
+
+#fileUpload{
+    display: none;
+}
+.preview_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.preview_info>button{
+    margin-top: 10px;
+    width: 10dvw;
+    padding: 5px;
+    background-color: #91A7D0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.preview_info>button:hover{
+    background-color: #8295b9;
+}
+
+.showPicture{
+    width: 50dvw;
+    height: 50dvh;
+}
+
+.pictureInput_agree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pictureInput_agree>p{
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+.pictureInput_agree>p>span{
+    color: blue;
+}
+
