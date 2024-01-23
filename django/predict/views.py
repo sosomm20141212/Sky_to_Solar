@@ -5,8 +5,8 @@ from django.views.decorators.csrf import csrf_exempt
 import numpy as np
 import cv2 as cv
 
-model_path1 = "C:/git-push/solar/django/predict/model/20240118_categorical_model.h5"
-model_path2 = "C:/git-push/solar/django/predict/model/20240118_VGG16.h5"
+model_path1 = "C:/git-push/solar/django/predict/model/bins14_model.h5"
+model_path2 = "C:/git-push/solar/django/predict/model/VGG16_14_model.h5"
 
 model = load_model(model_path1)
 conv_base = load_model(model_path2)
@@ -22,6 +22,7 @@ def model_predict(image_np_array):
 
     return prediction
 
+# React에서
 @csrf_exempt
 def model_result(request):
     if request.method == 'POST':
