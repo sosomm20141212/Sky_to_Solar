@@ -23,7 +23,7 @@ function Result() {
         <div className="result_component">
             <div className="logo_container">
                 <a href="/">
-                    <div className="logo">Sky To Solar</div>
+                    <div className="logo"/>
                 </a>
             </div>
 
