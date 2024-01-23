@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import '../static/css/Selectpicture.css';
+import Resizer from 'react-image-file-resizer';
 
 // 사진 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(
@@ -15,8 +16,6 @@ function Selectpicture() {
   const handleDragEnd = () => setActive(false);
   const [uploadedInfo, setUploadedInfo] = useState(null); // 미리보기 이미지의 데이터
   const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터 
-  
-
   
   const handleDragOver = (e)=>{
     e.preventDefault();
@@ -38,8 +37,36 @@ function Selectpicture() {
     console.log(e);
     const file = e.target.files[0];
     console.log(e.target.files[0]);
-    setFileInfo(file);
-    setStoreFile(file);
+    // 이미지 크기 조정
+    Resizer.imageFileResizer(
+      file,
+      1500,  // 너비 (조절 가능)
+      1500,  // 높이 (조절 가능)
+      'JPEG', // 형식
+      100, // 품질
+      0, // 회전
+      (uri) => {
+        const resizedFile = dataURLtoFile(uri, file.name);
+        setFileInfo(resizedFile);
+        setStoreFile(resizedFile);
+      },
+      'base64'
+    );
+  };
+
+// base64 문자열을 File 객체로 변환하는 도우미 함수
+  const dataURLtoFile = (dataURL, fileName) => {
+    const arr = dataURL.split(',');
+    const mime = arr[0].match(/:(.*?);/)[1];
+    const bstr = atob(arr[1]);
+    let n = bstr.length;
+    const u8arr = new Uint8Array(n);
+  
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+  
+    return new File([u8arr], fileName, { type: mime });
   };
 
   // 파일 정보 set
