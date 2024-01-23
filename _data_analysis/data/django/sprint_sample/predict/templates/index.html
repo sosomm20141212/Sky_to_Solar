@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Upload Example</title>
+</head>
+<body>
+    <form action="{% url 'model_predict' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image_file" accept="image/*">
+        <button type="submit">Upload Image</button>
+    </form>
+
+    {% if prediction is not None %}
+        <p>예측값 : {{ prediction }}</p>
+    {% endif %}
+
+</body>
+</html>
