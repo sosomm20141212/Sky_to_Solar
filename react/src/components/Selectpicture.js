@@ -1,7 +1,7 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import '../static/css/Selectpicture.css';
+import React, { useEffect, useState } from 'react';
 import Resizer from 'react-image-file-resizer';
+import '../static/css/Selectpicture.css';
 import Footer from './Footer';
 // 사진 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(
@@ -17,6 +17,10 @@ function Selectpicture() {
   const [uploadedInfo, setUploadedInfo] = useState(null); // 미리보기 이미지의 데이터
   const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터 
   
+  useEffect(() => {
+    window.sessionStorage.clear();
+  })
+
   const handleDragOver = (e)=>{
     e.preventDefault();
   };
@@ -109,9 +113,14 @@ function Selectpicture() {
         },
       });
       const result = response.data.result;
+      const imagePaths = response.data.image_paths;
       const imageUrl = uploadedInfo.imageUrl;
 
       window.sessionStorage.setItem("result",result);
+      window.sessionStorage.setItem("subImagePath1",imagePaths[0]);
+      window.sessionStorage.setItem("subImagePath2",imagePaths[1]);
+      window.sessionStorage.setItem("subImagePath3",imagePaths[2]);
+      window.sessionStorage.setItem("subImagePath4",imagePaths[3]);
       window.sessionStorage.setItem("imageUrl",imageUrl);
       
       window.location.href="/result";

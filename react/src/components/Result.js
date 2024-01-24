@@ -3,11 +3,19 @@ import "../static/css/Result.css";
 
 function Result() {
     const [wat, setWat] = useState('');
+    const [subImg1, setSubImage1] = useState('');
+    const [subImg2, setSubImage2] = useState('');
+    const [subImg3, setSubImage3] = useState('');
+    const [subImg4, setSubImage4] = useState('');
     const [img, setImage] = useState('');
 
     // Result 페이지가 뜨면 useEffect 내부의 로직 실행
     useEffect(() => {
         setWat(window.sessionStorage.getItem("result"));
+	    setSubImage1(window.sessionStorage.getItem("subImagePath1"));
+        setSubImage2(window.sessionStorage.getItem("subImagePath2"));
+        setSubImage3(window.sessionStorage.getItem("subImagePath3"));
+        setSubImage4(window.sessionStorage.getItem("subImagePath4"));
         setImage(window.sessionStorage.getItem("imageUrl"));
     },[]);
 
@@ -36,11 +44,10 @@ function Result() {
                             <div className="sub_text">※ 학습 결과와 유사한 데이터</div>
 
                             <div className="sub_image">
-                                <div className="sub_image1"/>
-                                {/* <img src={} className="sub_image1"/> */}
-                                <div className="sub_image2"/>
-                                <div className="sub_image3"/>
-                                <div className="sub_image4"/>
+                                <img src={subImg1} className="sub_image1"/>
+                                <img src={subImg2} className="sub_image2"/>
+                                <img src={subImg3} className="sub_image3"/>
+                                <img src={subImg4} className="sub_image4"/>
                             </div>
                         </div>
                     </div>
