@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import Resizer from 'react-image-file-resizer';
 import '../static/css/Selectpicture.css';
+import Resizer from 'react-image-file-resizer';
 
 // 사진 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(

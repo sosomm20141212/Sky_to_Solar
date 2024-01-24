@@ -1,0 +1,37 @@
+.bg {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .outer {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .section {
+    height: 100vh;
+    width: 100%;
+    
+    /* &:nth-child(1) {
+      background-color: rgb(230, 74, 74);
+    }
+    &:nth-child(2) {
+      background-color: rgb(255, 208, 53);
+    }
+    &:nth-child(3) {
+      background-color: rgb(77, 218, 157);
+    }
+    &:nth-child(4) {
+      background-color: rgb(83, 232, 255);
+    }
+    &:nth-child(5) {
+ 
+      background-color: rgb(126, 83, 255);
+    } */
+  }

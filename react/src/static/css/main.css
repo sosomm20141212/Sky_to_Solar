@@ -1,0 +1,267 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Gowun+Dodum&family=Single+Day&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gasoek+One&family=Gowun+Dodum&family=Single+Day&display=swap');
+
+.main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* font-family: 'Gowun Dodum', sans-serif; */
+}
+
+.main1 {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url('../images/main1BackgroundImg.jpg');
+    background-size: 100% 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main1 > * {
+    margin: 3% 0;
+}
+
+/* .main1::before {
+    background-image: url('../images/main1BackgroundImg.jpg');
+    background-size: 100% 90vh;
+    content: '';
+    opacity: 0.5;
+    position: absolute;
+    top: 100px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+} */
+
+.main1Content {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: white;
+    animation-name: main1content;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+@keyframes main1content {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main1StartBtt {
+    width: 300px;
+    height: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 0;
+    background-color: #91A7D0;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 30px;
+    animation-name: main1StartBtt;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+    pointer-events: none;
+}
+@keyframes main1StartBtt {
+    to {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+
+.main1StartBtt:hover {
+    background-color: #F6CAC9;
+    color: white;
+}
+
+/* .mainWrap {
+    width: 1400px;
+} */
+
+/* .mainMargin {
+    margin: 100px 0 0 0;
+} */
+
+.main2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 12%;
+}
+
+.main2Img {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main2Txt {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main2Txt p {
+    margin: 0;
+}
+
+.main2TxtTitle {
+    font-size: 2.3rem;
+    box-sizing: border-box;
+    line-height: 100%;
+    margin: 0 0 50px 0;
+}
+
+.main2TxtTitle1 {
+    display: flex;
+    margin: 0 0 2% 0;
+}
+
+.main2TxtTitle2 {
+    display: flex;
+}
+
+.main2TxtTitlePoint {
+    font-weight: bold;
+    font-size: 2.9rem;
+}
+
+.main2TxtTitle1PointColor {
+    color: #91A7D0;
+}
+
+.main2TxtTitle2PointColor {
+    color: #F6CAC9;
+}
+
+.main3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 12%;
+}
+
+.main3Img {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main3Txt {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main3TxtTitle {
+    display: flex;
+    font-size: 2.3rem;
+    box-sizing: border-box;
+    line-height: 100%;
+    justify-content: end;
+    margin: 0 0 50px 0;
+}
+
+.main3TxtTitle > p {
+    margin: 0;
+}
+
+.main3TxtTitlePoint {
+    font-size: 2.9rem;
+    font-weight: bold;
+    color: #F6CAC9;
+}
+
+.main3Txtcontent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.main3Txtcontent p {
+    margin: 0;
+}
+
+.main4 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 12%;
+}
+
+.main4Img {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main4Txt {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main5 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #91A7D0;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/main5BackgroundImg.jpg');
+    background-size: 100% 100%;
+}
+
+.main5 > * {
+    margin: 2% 0;
+}
+
+.main5Txt {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.main5StartBtt {
+    width: 300px;
+    height: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 0;
+    background-color: #91A7D0;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+.main5StartBtt:hover {
+    background-color: #F6CAC9;
+    color: white;
+}
