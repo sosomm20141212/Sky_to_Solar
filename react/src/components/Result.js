@@ -5,16 +5,17 @@ function Result() {
     const [wat, setWat] = useState('');
     const [img, setImage] = useState('');
 
+    // Result 페이지가 뜨면 useEffect 내부의 로직 실행
     useEffect(() => {
         setWat(window.sessionStorage.getItem("result"));
         setImage(window.sessionStorage.getItem("imageUrl"));
     },[]);
 
-    // 일조량 -> 건전지(에너자이저) 변환
-    // (1000*(일사량*패널효율*시간)/건전지 전압)/건전지 용량
-    const wat_low = (wat-1)*1000;
-    const wat_high = wat*1000;
+    // Category의 일사량 범위 계산
+    const wat_low = (wat-1)*500;
+    const wat_high = wat*500;
 
+    // 충전 가능한 건전지 개수 범위 계산
     const battery_low = Math.round((1000*(wat_low*0.1*60)/1.5)/2850);
     const battery_high = Math.round((1000*(wat_high*0.1*60)/1.5)/2850);
 
