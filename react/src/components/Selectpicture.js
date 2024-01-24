@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import Resizer from 'react-image-file-resizer';
 import '../static/css/Selectpicture.css';
+import Resizer from 'react-image-file-resizer';
 
 // 사진 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(
@@ -83,7 +83,7 @@ function Selectpicture() {
     
     reader.onload = () => {
       setUploadedInfo({ name, size, type, imageUrl: String(reader.result)}); // 비트맵 데이터 리턴(이 데이터로 사진 미리보기 구현)
-      // console.log({ name, size, type, imageUrl: String(reader.result)});
+    
     };
     reader.readAsDataURL(file);
     
@@ -111,7 +111,6 @@ function Selectpicture() {
       const result = response.data.result;
       const imageUrl = uploadedInfo.imageUrl;
 
-      window.sessionStorage.clear();
       window.sessionStorage.setItem("result",result);
       window.sessionStorage.setItem("imageUrl",imageUrl);
       
@@ -140,7 +139,7 @@ function Selectpicture() {
                     onDrop={handleDrop}>
 
                 <label> 
-                  <input id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
+                  <input key = {uploadedInfo} id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
                       {uploadedInfo &&( 
                         <>
                           <div className="preview_info">
