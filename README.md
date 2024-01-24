@@ -12,6 +12,10 @@ KepcoA Sprint II 1조 / 하늘 사진을 통한 태양광 발전량 예측 모�
 2. 사용자가 웹에 사진을 업로드 하면 이 사진을 이용하여 태양광 에너지 생산량을 예측 
 3. 예측된 대략적인 태양광 에너지 생산량을 사용자에게 제공
 
+### 사용 DataSet
+🔎Kaggle "Solar Energy Forecasting using Low-Res Sky Images"
+(https://www.kaggle.com/datasets/maksboralessa/solar-energy-forecasting-using-low-res-sky-images)
+
 ### 라이센스
 이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 [LICENSE](LICENSE)를 참조하세요.
 
