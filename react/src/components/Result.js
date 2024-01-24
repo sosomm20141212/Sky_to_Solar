@@ -45,13 +45,24 @@ function Result() {
                 <div className="modal_container">
                     <div className="wrap_container">
                             <div className="sub_container">
-                                <div className="sub_text">학습 결과와 유사한 데이터는 다음과 같아요</div>
+                                <div className="sub_text">학습 결과와 유사한 데이터는 다음과 같아요.</div>
 
                                 <div className="sub_image">
-                                    <img src={subImg1} className="sub_image1"/>
-                                    <img src={subImg2} className="sub_image2"/>
-                                    <img src={subImg3} className="sub_image3"/>
-                                    <img src={subImg4} className="sub_image4"/>
+                                    <div className="sub_image1">
+                                        <img src={subImg1} />
+                                    </div>
+                                 
+                                    <div className="sub_image2">
+                                        <img src={subImg2}/>
+                                    </div>
+
+                                    <div className="sub_image2">
+                                        <img src={subImg3} />
+                                    </div>
+
+                                    <div className="sub_image1">
+                                        <img src={subImg4} />
+                                    </div>
                                 </div>
                             </div>
                       

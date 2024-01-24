@@ -1,4 +1,4 @@
-/* 예시 페이지의 가독성을 위해 가운데 정렬, 수정해야함 */
+
 .InputPicture{
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
 }
 
 .InputPicture_section{
-    margin-top: 25px;
+    margin: 25px 0 30px;
     width: 100%;
 }
 .InputPicture_article{
@@ -25,12 +25,20 @@
     height: 150px;
     border-radius: 12px;
 }
+.howtoInput_imgUrl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.howtoInput_imgUrl>h4{
+    margin-bottom: 10px;
+}
 .howtoInput_imgUrl>ul>li{
     font-size: 15px;
 }
 .howtoInput_imgUrl>button{
     background-color: #91A7D0;
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 5px;
     border: none;
     color: white;
@@ -41,7 +49,6 @@
 }
 
 .howtoInput_ol {
-    /* list-style-position: inside; */
     list-style: none;
     counter-reset: list-number;
     padding: 0;

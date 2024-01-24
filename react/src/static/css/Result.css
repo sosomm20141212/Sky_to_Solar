@@ -35,58 +35,66 @@ section{
 }
 .main_image {
     width: 50dvw;
-    height: 500px;
+    height: 400px;
 }
 
 .modal_container {
-    width: fit-content;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 40px 0 30px 0;
     border-radius: 10px;
-    /* background-color: #F6CAC9; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sub_container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* background-color: lightgray; */
+    justify-content: space-around;
     border-radius: 10px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .sub_text {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 10px;
+    
 }
 
 .sub_image {
     width: 500px;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 20px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 250px 250px;
+    
+}
+
+.sub_image>div>img {
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
 }
 
 .sub_image1 {
-    width: 24.5%;
-    height: 100%;
+    width: 250px;
+    height: 250px;
+    background-color: #e6bdbd;
     object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .sub_image2 {
-    width: 24.5%;
-    height: 100%;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-}
-.sub_image3 {
-    width: 24.5%;
-    height: 100%;
-    object-fit: cover;
-}
-.sub_image4 {
-    width: 24.5%;
-    height: 100%;
-    object-fit: cover;
+    background-color: #91A7D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .result_container {
@@ -102,7 +110,7 @@ section{
     padding: 2%;
     border-radius: 10px;
     border: solid 2px lightgray;
-
+    background-color: white;
     /* background-color: #91A7D0; */
     /* background-color: #F6CAC9; */
 }
