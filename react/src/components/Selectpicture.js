@@ -180,7 +180,7 @@ function Selectpicture() {
           </div>
         </div>
       </section>
-      <Footer/>
+     
     </div>
 
   );
