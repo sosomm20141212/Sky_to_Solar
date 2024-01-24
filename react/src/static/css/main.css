@@ -14,15 +14,22 @@
     height: 100vh;
     box-sizing: border-box;
     background-image: url('../images/main1BackgroundImg.jpg');
-    background-size: 100% 950px;
+    background-size: 100% 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
 
-.main1 > * {
-    margin: 3% 0;
+    /* 백그라운드 애니메이션 */
+    background-position-y: bottom;
+    animation: grow 30s linear infinite;
+}
+@keyframes grow {
+    0%   { background-size: 100% auto; }
+    25%   { background-size: 120% auto; }
+    50%   { background-size: 150% auto; }
+    75% { background-size: 120% auto; }
+    100% { background-size: 100% auto; }
 }
 
 /* .main1::before {
