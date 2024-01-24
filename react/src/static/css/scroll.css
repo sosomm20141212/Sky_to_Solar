@@ -1,37 +1,67 @@
 .bg {
-    position: relative;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.outer {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+}
+
+/* 스크롤 다운 화살표  */
+
+.scrolldown_Btn{
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scrolldown_Btn>span{
+  font-size: 20px;
+}
+.scrolldown_Btn>svg{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  animation: sdb2 3s infinite;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+@-webkit-keyframes sdb2 {
+  0% {
+    -webkit-transform: translateY(0);
   }
-  
-  .outer {
-    height: 100vh;
-    width: 100%;
-    overflow-y: auto;
+  20% {
+    -webkit-transform: translateY(10px);
   }
-  
-  .section {
-    height: 100vh;
-    width: 100%;
-    
-    /* &:nth-child(1) {
-      background-color: rgb(230, 74, 74);
-    }
-    &:nth-child(2) {
-      background-color: rgb(255, 208, 53);
-    }
-    &:nth-child(3) {
-      background-color: rgb(77, 218, 157);
-    }
-    &:nth-child(4) {
-      background-color: rgb(83, 232, 255);
-    }
-    &:nth-child(5) {
- 
-      background-color: rgb(126, 83, 255);
-    } */
+  40% {
+    -webkit-transform: translateY(0);
   }
+}
+@keyframes sdb2 {
+  0% {
+    transform:translateY(0);
+  }
+  20% {
+    transform: translateY(10px);
+  }
+  40% {
+    transform:translateY(0);
+  }
+}
+

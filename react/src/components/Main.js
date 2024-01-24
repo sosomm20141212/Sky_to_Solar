@@ -1,5 +1,3 @@
-import { useState, useRef } from 'react';
-
 import '../static/css/scroll.css';
 import '../static/css/main.css';
 import FullPageScroll from "./FullPageScroll";
@@ -21,6 +19,16 @@ function Main() {
                         <div className='main1 mainContainer' >
                             <p className='main1Content'>하늘을 찍어 태양광 에너지를 예측해보세요</p>
                             <button className='main1StartBtt' onClick={btnClick}>시작하기</button>
+                            
+                            {/* 스크롤 다운 화살표 */}
+                            <div className= "scrolldown_Btn">
+                                <span>scroll down</span>
+                                {/* <span></span> */}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17.679" height="34.092" viewBox="0 0 17.679 34.092">
+                                    <path id="scroll-arrow-black" d="M-1195-800.91h0l-.946-.947-7.893-7.892,1.061-1.061,7.033,7.034V-835h1.5v31.214l7.024-7.024,1.061,1.06-7.779,7.779,0,0-1.06,1.06Z" transform="translate(1203.841 835)" fill="#121212"/>
+                                </svg>
+                            </div>
+                            
                         </div>
                     </div>
 
