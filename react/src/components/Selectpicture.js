@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import '../static/css/Selectpicture.css';
 import Resizer from 'react-image-file-resizer';
+import '../static/css/Selectpicture.css';
 
 // 사진 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(
@@ -111,6 +111,7 @@ function Selectpicture() {
       const result = response.data.result;
       const imageUrl = uploadedInfo.imageUrl;
 
+      window.sessionStorage.clear();
       window.sessionStorage.setItem("result",result);
       window.sessionStorage.setItem("imageUrl",imageUrl);
       

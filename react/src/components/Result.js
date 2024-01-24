@@ -8,7 +8,6 @@ function Result() {
     useEffect(() => {
         setWat(window.sessionStorage.getItem("result"));
         setImage(window.sessionStorage.getItem("imageUrl"));
-        window.sessionStorage.clear();
     },[]);
 
     // 일조량 -> 건전지(에너자이저) 변환
