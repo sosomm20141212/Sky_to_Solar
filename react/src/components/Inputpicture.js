@@ -1,7 +1,7 @@
 import React from 'react';
 import '../static/css/Inputpicture.css';
 import Selectpicture from './Selectpicture';
-
+import Footer from './Footer';
 function Inputpicture() {
   return (
     <div className='InputPicture'>
@@ -47,6 +47,8 @@ function Inputpicture() {
           </div>
         </article>
       </section>
+
+      <Footer/>
     </div>
   );
 }
