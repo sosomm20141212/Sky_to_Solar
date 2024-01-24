@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Resizer from 'react-image-file-resizer';
 import '../static/css/Selectpicture.css';
-import Footer from './Footer';
+
 // 사진 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(
   <svg class = "InputfileLogo" aria-label="새로운 파일" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
