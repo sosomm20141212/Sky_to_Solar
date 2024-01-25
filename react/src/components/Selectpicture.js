@@ -11,53 +11,66 @@ const InputfileLogo = ()=>(
 );
 
 function Selectpicture() {
-  const [isActive, setActive] = useState(false); 
+  const [isActive, setActive] = useState(false);
   const handleDragstart = () => setActive(true);
   const handleDragEnd = () => setActive(false);
   const [uploadedInfo, setUploadedInfo] = useState(null); // 미리보기 이미지의 데이터
-  const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터 
+  const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터
   
   // 업로드 페이지 실행 시 sessionStorage 초기화
   useEffect(() => {
     window.sessionStorage.clear();
   })
 
-  // 마우스 드리그 오버 확인하기 
+  // 마우스 드리그 오버 확인하기
   const handleDragOver = (e)=>{
     e.preventDefault();
   };
 
   // 입력상자에 사진을 드래그앤 드롭으로 입력
   const handleDrop = (e)=>{
-    // console.log(e);
-    e.preventDefault();
-    setActive(false);
-    const file = e.dataTransfer.files[0]; 
-    setFileInfo(file);
-    setStoreFile(file);
-    console.log(e.dataTransfer);
+    // 드래그앤 드롭 시 image 관련 확장자가 아니면 alert 표시
+    if (uploadedInfo != null) {
+      // console.log(e);
+      e.preventDefault();
+      setActive(false);
+      const file = e.dataTransfer.files[0];
+      setFileInfo(file);
+      setStoreFile(file);
+      console.log(e.dataTransfer);
+    }
+    else {
+      window.alert("파일 형식을 확인해주세요");
+      e.preventDefault();
+    }
   };
 
   // 입력 상자 클릭 후 사진 입력
   const handleUpload = (e) =>{
-    console.log(e);
-    const file = e.target.files[0];
-    console.log(e.target.files[0]);
-    // 이미지 크기 조정
-    Resizer.imageFileResizer(
-      file,
-      1500,  // 너비 (조절 가능)
-      1500,  // 높이 (조절 가능)
-      'JPEG', // 형식
-      100, // 품질
-      0, // 회전
-      (uri) => {
-        const resizedFile = dataURLtoFile(uri, file.name);
-        setFileInfo(resizedFile);
-        setStoreFile(resizedFile);
-      },
-      'base64'
-    );
+    // 사진 입력 시 모든 파일 확장자면 alert 표시
+    try {
+      console.log(e);
+      const file = e.target.files[0];
+      console.log(e.target.files[0]);
+      // 이미지 크기 조정
+      Resizer.imageFileResizer(
+        file,
+        1500,  // 너비 (조절 가능)
+        1500,  // 높이 (조절 가능)
+        'JPEG', // 형식
+        100, // 품질
+        0, // 회전
+        (uri) => {
+          const resizedFile = dataURLtoFile(uri, file.name);
+          setFileInfo(resizedFile);
+          setStoreFile(resizedFile);
+        },
+        'base64'
+      );
+    }
+    catch {
+      window.alert("파일 형식을 확인해주세요");
+    }
   };
 
 // base64 문자열을 File 객체로 변환하는 도우미 함수
@@ -132,8 +145,9 @@ function Selectpicture() {
     }
     catch (e) {
        // Data 전송 또는 return에 문제 발생 시 콘솔에 에러 메시지 기록
-      console.error("1",e);
-      throw e;
+      console.log(e);
+      // 데이터 왕복에 문제 발생 시 alert 표시
+      window.alert("올바른 파일인지 다시 확인해주세요");
     }
   };
 
@@ -148,19 +162,19 @@ function Selectpicture() {
         
 
           <div className='picture_label'>
-            <div  className={`fileSelect${isActive ? 'active':''}`}
+            <div  className={`fileSelect${isActive ? 'active': ''}`}
                     onDragEnter={handleDragstart}
                     onDragLeave={handleDragEnd}
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}>
 
-                <label> 
+                <label>
                   <input key = {uploadedInfo} id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
-                      {uploadedInfo &&( 
+                      {uploadedInfo &&(
                         <>
                           <div className="preview_info">
                               <div>
-                                <img src = {uploadedInfo.imageUrl} className='showPicture'/> 
+                                <img src = {uploadedInfo.imageUrl} className='showPicture'/>
                               </div>
                                 <button onClick={(e) => {
                                   ImageSave();
@@ -170,7 +184,7 @@ function Selectpicture() {
                         </>
                       )}
 
-                      {!uploadedInfo&&( 
+                      {!uploadedInfo&&(
                         <>
                           <div><h4>하늘 사진 파일 선택</h4></div>
                           <div><InputfileLogo/></div>
