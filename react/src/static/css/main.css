@@ -5,15 +5,14 @@
     /* border: 1px solid black; */
 }
 
-/* .main3Wrap::-webkit-scrollbar {
-    display: none;
-} */
-
 /* main3 애니메이션 - 가로 스크롤바 없애기 */
-/* .main3Wrap {
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
+::-webkit-scrollbar {
+    display: none;
+}
+
+strong {
+    font-size: 1.69rem;
+}
 
 /* .main {
     box-sizing: border-box;
@@ -180,7 +179,7 @@
 
 .main2TxtTitlePoint {
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .main2TxtTitle1PointColor {
@@ -230,10 +229,9 @@
 }
 
 .main3TxtTitlePoint {
-    font-size: 2.7rem;
     font-weight: bold;
     color: #F6CAC9;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .main3Txtcontent {
@@ -292,7 +290,7 @@
 .main4TxtTitle1Point {
     font-weight: bold;
     color: #F6CAC9;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .main4TxtTitle2 {
@@ -302,7 +300,7 @@
 .main4TxtTitle2Point {
     font-weight: bold;
     color: #91A7D0;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .main4TxtContent p {

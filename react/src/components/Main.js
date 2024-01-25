@@ -17,12 +17,21 @@ import main4Img from '../static/images/main4Img.jpg';
 import logo from '../static/images/logo.png';
 
 function Main() {
+    // const [mainNavSwitch, setMainNavSwitch] = useState(false);
     function btnClick(e){
         window.location.href="/Input"
     }
     
+    // 스크롤 내리면 섹션에 애니메이션 - aos 라이브러리
+    // useEffect(()=>{
+    //     aos.init({
+    //         once: true
+    //     });
+    // })
+
     return(
         <div className='app'>
+           {/* <MainApp></MainApp> */}
      
                 <FullPageScroll>
                     <div className="bg section">
@@ -166,7 +175,7 @@ function Main() {
                                         <br/>
                                     </Fade>
                                     <Fade duration={2000} delay={4000}>
-                                        <p><strong>→교통 신호등</strong>, <strong>도로 표지등</strong>, <strong>일반 경고등</strong></p>
+                                        <p><strong>→ 교통 신호등</strong>, <strong>도로 표지등</strong>, <strong>일반 경고등</strong></p>
                                         <br/><br/>
                                     </Fade>
                                     <Fade duration={2000} delay={4500}>
