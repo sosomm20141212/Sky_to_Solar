@@ -1,35 +1,51 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Gowun+Dodum&family=Single+Day&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gasoek+One&family=Gowun+Dodum&family=Single+Day&display=swap');
 
-.main {
+* {
+    /* border: 1px solid black; */
+}
+
+/* .main3Wrap::-webkit-scrollbar {
+    display: none;
+} */
+
+/* main3 애니메이션 - 가로 스크롤바 없애기 */
+/* .main3Wrap {
+    overflow-x: hidden;
+    overflow-y: auto;
+} */
+
+/* .main {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* font-family: 'Gowun Dodum', sans-serif; */
-}
+    font-family: 'Gowun Dodum', sans-serif;
+} */
 
 .main1 {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     background-image: url('../images/main1BackgroundImg.jpg');
-    background-size: 100% 1000px;
+    background-size: 100% 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    /* 백그라운드 애니메이션 */
     background-position-y: bottom;
     animation: grow 30s linear infinite;
 }
 @keyframes grow {
-    0%   { background-size: 100% auto; }
-    25%   { background-size: 120% auto; }
-    50%   { background-size: 150% auto; }
+    0% { background-size: 100% auto; }
+    25% { background-size: 120% auto; }
+    50% { background-size: 150% auto; }
     75% { background-size: 120% auto; }
     100% { background-size: 100% auto; }
+}
+
+.main1 > * {
+    margin: 3% 0;
 }
 
 /* .main1::before {
@@ -44,6 +60,23 @@
     right: 0px;
 } */
 
+.main1Logo {
+    width: 800px;
+    filter: brightness(0) invert(1);
+    animation-name: main1Logo;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+@keyframes main1Logo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .main1Content {
     font-size: 4.5rem;
     font-weight: bold;
@@ -51,7 +84,7 @@
     animation-name: main1content;
     animation-duration: 3s;
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: 2s;
 }
 @keyframes main1content {
     from {
@@ -75,7 +108,7 @@
     border-radius: 30px;
     animation-name: main1StartBtt;
     animation-duration: 3s;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-fill-mode: both;
     opacity: 0;
     pointer-events: none;
@@ -106,23 +139,23 @@
     height: 100vh;
     display: flex;
     box-sizing: border-box;
-    padding: 0 12%;
 }
 
 .main2Img {
-    width: 50%;
+    width: 45%;
     height: 100%;
     box-sizing: border-box;
 }
 
 .main2Txt {
-    width: 50%;
+    width: 55%;
     height: 100%;
     box-sizing: border-box;
-    padding: 3%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 .main2Txt p {
@@ -130,7 +163,7 @@
 }
 
 .main2TxtTitle {
-    font-size: 2.3rem;
+    font-size: 3rem;
     box-sizing: border-box;
     line-height: 100%;
     margin: 0 0 50px 0;
@@ -147,7 +180,7 @@
 
 .main2TxtTitlePoint {
     font-weight: bold;
-    font-size: 2.9rem;
+    font-size: 3.5rem;
 }
 
 .main2TxtTitle1PointColor {
@@ -163,23 +196,23 @@
     height: 100vh;
     display: flex;
     box-sizing: border-box;
-    padding: 0 12%;
 }
 
 .main3Img {
-    width: 50%;
+    width: 45%;
     height: 100%;
     box-sizing: border-box;
 }
 
 .main3Txt {
-    width: 50%;
+    width: 55%;
     height: 100%;
     box-sizing: border-box;
-    padding: 3%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 .main3TxtTitle {
@@ -189,6 +222,7 @@
     line-height: 100%;
     justify-content: end;
     margin: 0 0 50px 0;
+    font-size: 3rem;
 }
 
 .main3TxtTitle > p {
@@ -196,9 +230,10 @@
 }
 
 .main3TxtTitlePoint {
-    font-size: 2.9rem;
+    font-size: 2.7rem;
     font-weight: bold;
     color: #F6CAC9;
+    font-size: 3.5rem;
 }
 
 .main3Txtcontent {
@@ -217,19 +252,61 @@
     height: 100vh;
     display: flex;
     box-sizing: border-box;
-    padding: 0 12%;
 }
 
 .main4Img {
-    width: 50%;
+    width: 45%;
     height: 100%;
     box-sizing: border-box;
 }
 
 .main4Txt {
-    width: 50%;
+    width: 55%;
     height: 100%;
     box-sizing: border-box;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.main4TxtTitle {
+    font-size: 2.3rem;
+    box-sizing: border-box;
+    line-height: 100%;
+    margin: 0 0 50px 0;
+    display: flex;
+    font-size: 3rem;
+}
+
+.main4TxtTitle p {
+    margin: 0;
+}
+
+.main4TxtTitle1 {
+    display: flex;
+    margin: 0 0 2% 0;
+}
+
+.main4TxtTitle1Point {
+    font-weight: bold;
+    color: #F6CAC9;
+    font-size: 3.5rem;
+}
+
+.main4TxtTitle2 {
+    display: flex;
+}
+
+.main4TxtTitle2Point {
+    font-weight: bold;
+    color: #91A7D0;
+    font-size: 3.5rem;
+}
+
+.main4TxtContent p {
+    margin: 0;
 }
 
 .main5 {
@@ -272,3 +349,120 @@
     background-color: #F6CAC9;
     color: white;
 }
+
+@media (max-width: 767px) {
+    .main1Content,
+    .main2Txtcontent,
+    .main3Txtcontent,
+    .main4Txt,
+    .main5Txt {
+      font-size: 1.5rem; /* 스마트폰 화면에 대한 텍스트 크기 */
+    }
+  }
+  
+  
+  /* 메인텍스트2번 */
+  
+  .main2TxtTitle,.main2TxtTitlePoint{
+    white-space: nowrap;
+    overflow-wrap: break-word;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .main2Txtcontent {
+      font-size: 16px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .main2Txtcontent {
+      font-size: 14px; /* 아주 작은 화면에서 글자 크기 더 줄이기 */
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .main2TxtTitle,.main3TxtTitlePoint {
+      font-size: 30px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .main2TxtTitle,.main2TxtTitlePoint {
+      font-size: 23px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+  }
+  
+  
+  /* 메인텍스트3번 */
+  
+  .main3TxtTitle,.main3TxtTitlePoint{
+    white-space: nowrap;
+    overflow-wrap: break-word;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .main3Txtcontent {
+      font-size: 16px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .main3Txtcontent {
+      font-size: 14px; /* 아주 작은 화면에서 글자 크기 더 줄이기 */
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .main3TxtTitle,.main3TxtTitlePoint {
+      font-size: 30px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .main3TxtTitle,.main3TxtTitlePoint {
+      font-size: 10px; /* 아주 작은 화면에서 글자 크기 더 줄이기 */
+    }
+  }  
+  
+  @media screen and (max-width: 767px) {
+    .main3TxtTitle,.main3TxtTitlePoint {
+      font-size: 23px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+  }
+
+/* 메인텍스트4번 */
+
+.main4TxtTitle,.main4TxtTitle1Point,.main4TxtTitle2Point{
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    }
+    
+    @media screen and (max-width: 767px) {
+    .main4TxtContent {
+        font-size: 16px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+    }
+    
+    @media screen and (max-width: 480px) {
+    .main4TxtContent {
+        font-size: 14px; /* 아주 작은 화면에서 글자 크기 더 줄이기 */
+    }
+    }
+    
+    @media screen and (max-width: 767px) {
+    .main4TxtTitle,.main4TxtTitle1Point,.main4TxtTitle2Point {
+        font-size: 30px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+    }
+    
+    @media screen and (max-width: 480px) {
+    .main4TxtTitle,.main4TxtTitle1Point,.main4TxtTitle2Point {
+        font-size: 10px; /* 아주 작은 화면에서 글자 크기 더 줄이기 */
+    }
+    }  
+    
+    @media screen and (max-width: 767px) {
+    .main4TxtTitle,.main4TxtTitle1Point,.main4TxtTitle2Point {
+        font-size: 23px; /* 작은 화면에서 글자 크기 줄이기 */
+    }
+    }

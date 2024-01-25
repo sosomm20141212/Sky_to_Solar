@@ -20,48 +20,54 @@
 }
 
 /* 스크롤 다운 화살표  */
-
 .scrolldown_Btn{
-  position: absolute;
-  bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+animation-name: scrolldown_Btn;
+animation-duration: 3s;
+animation-delay: 4s;
+animation-fill-mode: both;
+}
+@keyframes scrolldown_Btn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
 }
 .scrolldown_Btn>span{
-  font-size: 20px;
+font-size: 20px;
 }
 .scrolldown_Btn>svg{
-  width: 30px;
-  height: 30px;
-  margin-top: 10px;
-  animation: sdb2 3s infinite;
-  box-sizing: border-box;
-  box-sizing: border-box;
+width: 30px;
+height: 30px;
+margin-top: 10px;
+animation: sdb2 3s infinite;
+box-sizing: border-box;
 }
-
-
 @-webkit-keyframes sdb2 {
-  0% {
-    -webkit-transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(10px);
-  }
-  40% {
-    -webkit-transform: translateY(0);
-  }
+0% {
+  -webkit-transform: translateY(0);
+}
+20% {
+  -webkit-transform: translateY(10px);
+}
+40% {
+  -webkit-transform: translateY(0);
+}
 }
 @keyframes sdb2 {
-  0% {
-    transform:translateY(0);
-  }
-  20% {
-    transform: translateY(10px);
-  }
-  40% {
-    transform:translateY(0);
-  }
+0% {
+  transform:translateY(0);
 }
-
+20% {
+  transform: translateY(10px);
+}
+40% {
+  transform:translateY(0);
+}
+}
