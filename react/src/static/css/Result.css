@@ -3,6 +3,17 @@
 .result_component {
     width: 100%;
     height: 100%;
+    opacity: 0;
+    animation: fadeIn 0.00001s ease-in-out 0s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 section{
