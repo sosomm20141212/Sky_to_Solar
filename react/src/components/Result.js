@@ -46,7 +46,8 @@ function Result() {
 
     // Category의 일사량 범위 계산
     // ============================== 계산식 ==============================
-    // wat_low = predict * 500(bins 값)
+    // wat_low = predict-1(predict 범위의 최소값) * 500(bins 값)
+    // wat_high = predict(predict 범위의 최대값) * 500(bins 값)
     // ※ predict가 존재하고 값이 1 ~ 14 일 시에 계산하고 아니면 0으로 설정
     // ===================================================================
     const wat_low = 0 < wat < 15 & wat != null? (wat-1)*500 : 0;
