@@ -30,18 +30,30 @@ function Selectpicture() {
   // 입력상자에 사진을 드래그앤 드롭으로 입력
   const handleDrop = (e)=>{
     // 드래그앤 드롭 시 image 관련 확장자가 아니면 alert 표시
-    if (uploadedInfo != null) {
+    if (uploadedInfo == null) {
       // console.log(e);
       e.preventDefault();
       setActive(false);
       const file = e.dataTransfer.files[0];
-      setFileInfo(file);
-      setStoreFile(file);
-      console.log(e.dataTransfer);
+      if (file.type.indexOf("image") != -1) {
+        setFileInfo(file);
+        setStoreFile(file);
+      }
+      else {
+        window.alert("파일 형식을 확인해주세요");
+      }
     }
     else {
-      window.alert("파일 형식을 확인해주세요");
       e.preventDefault();
+      setActive(false);
+      const file = e.dataTransfer.files[0];
+      if (file.type.indexOf("image") != -1) {
+        setFileInfo(file);
+        setStoreFile(file);
+      }
+      else {
+        window.alert("파일 형식을 확인해주세요");
+      }
     }
   };
 
