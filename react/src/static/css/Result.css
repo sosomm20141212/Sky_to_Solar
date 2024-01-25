@@ -1,12 +1,8 @@
-/* body {
-    background-color: whitesmoke;
-} */
-
 .result_component {
     width: 100%;
     height: 100%;
-   
 }
+
 section{
     display: flex;
     flex-direction: column;
@@ -16,8 +12,8 @@ section{
 .wrap_container {
     width: fit-content;
     margin: auto;
-    /* background-color: #91A7D0; */
 }
+
 .show_Image{
     background-color:#F6CAC9;
     display: flex;
@@ -25,21 +21,28 @@ section{
     align-items: center;
     width: 100%;
 }
+
 .mainImage_box{
     background-color: white;
     border: solid 1px lightgray;
     border-radius: 5px;
-    padding: 10px;
+    padding-bottom: 40px;
     position:relative;
     top: 25px;
+    width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .main_image {
-    width: 50dvw;
+    width: 750px;
     height: 400px;
+    padding: 20px 0 10px 0;
 }
 
 .modal_container {
-    margin: 40px 0 30px 0;
+    margin: 50px 0 30px 0;
     border-radius: 10px;
     width: 100%;
     display: flex;
@@ -58,40 +61,30 @@ section{
 .sub_text {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
-    
+    margin-bottom: 20px;
 }
 
 .sub_image {
-    width: 500px;
-    height: 500px;
+    width: 950px;
+    height: 225px;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 250px 250px;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 225px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .sub_image>div>img {
-    width: 225px;
-    height: 225px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .sub_image1 {
-    width: 250px;
-    height: 250px;
-    background-color: #e6bdbd;
+    width: 225px;
+    height: 225px;
     object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sub_image2 {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    background-color: #91A7D0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,13 +99,11 @@ section{
 }
 
 .result_energy, .use_energy {
-    width: 96%;
+    width:470px;
     padding: 2%;
     border-radius: 10px;
     border: solid 2px lightgray;
     background-color: white;
-    /* background-color: #91A7D0; */
-    /* background-color: #F6CAC9; */
 }
 
 .result_energy_top, .use_energy_top {
@@ -124,7 +115,9 @@ section{
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    color: blue;
 }
+
 .result_energy_bottom, .use_energy_bottom {
     text-align: right;
     font-size: 15px;
@@ -144,6 +137,6 @@ section{
 }
 
 .reset:hover{
-    background-color: #e6bdbd;
+    background-color: #e6bdbc;
 }
 

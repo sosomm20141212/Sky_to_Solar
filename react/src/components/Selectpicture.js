@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Resizer from 'react-image-file-resizer';
 import '../static/css/Selectpicture.css';
 
-// 사진 로고 (추후 svg path 수정 가능)
+// 사진 입력 로고 (추후 svg path 수정 가능)
 const InputfileLogo = ()=>(
   <svg class = "InputfileLogo" aria-label="새로운 파일" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
     <path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line>
@@ -11,17 +11,18 @@ const InputfileLogo = ()=>(
 );
 
 function Selectpicture() {
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(false); 
   const handleDragstart = () => setActive(true);
   const handleDragEnd = () => setActive(false);
   const [uploadedInfo, setUploadedInfo] = useState(null); // 미리보기 이미지의 데이터
-  const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터
+  const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터 
   
   // 업로드 페이지 실행 시 sessionStorage 초기화
   useEffect(() => {
     window.sessionStorage.clear();
   })
 
+  // 마우스 드리그 오버 확인하기 
   const handleDragOver = (e)=>{
     e.preventDefault();
   };
@@ -31,7 +32,7 @@ function Selectpicture() {
     // console.log(e);
     e.preventDefault();
     setActive(false);
-    const file = e.dataTransfer.files[0];
+    const file = e.dataTransfer.files[0]; 
     setFileInfo(file);
     setStoreFile(file);
     console.log(e.dataTransfer);
@@ -119,30 +120,30 @@ function Selectpicture() {
       const imagePaths = response.data.image_paths;
       const imageUrl = uploadedInfo.imageUrl;
 
-      // Return값을 다른 페이지에서도 사용하기 위해서 sessionStorage에 저장
+       // Return값을 다른 페이지에서도 사용하기 위해서 sessionStorage에 저장
       window.sessionStorage.setItem("result",result);
       window.sessionStorage.setItem("subImagePath1",imagePaths[0]);
       window.sessionStorage.setItem("subImagePath2",imagePaths[1]);
       window.sessionStorage.setItem("subImagePath3",imagePaths[2]);
       window.sessionStorage.setItem("subImagePath4",imagePaths[3]);
       window.sessionStorage.setItem("imageUrl",imageUrl);
-      
       // 위의 과정이 끝나면 결과 페이지로 이동
       window.location.href="/result";
     }
     catch (e) {
-      // Data 전송 또는 return에 문제 발생 시 콘솔에 에러 메시지 기록
-      console.error("Return Error",e);
+       // Data 전송 또는 return에 문제 발생 시 콘솔에 에러 메시지 기록
+      console.error("1",e);
       throw e;
     }
   };
 
   return (
     <div className='select_picture'>
+
       <section>
         <div className='select_box'>
           <div>
-            <h2>하늘 사진 입력</h2>
+            <h2>태양광 에너지 생산량 예측</h2>
           </div>
         
 
@@ -153,39 +154,40 @@ function Selectpicture() {
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}>
 
-                <label>
+                <label> 
                   <input key = {uploadedInfo} id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
-                      {uploadedInfo &&(
+                      {uploadedInfo &&( 
                         <>
                           <div className="preview_info">
                               <div>
-                                <img src = {uploadedInfo.imageUrl} className='showPicture'/>
+                                <img src = {uploadedInfo.imageUrl} className='showPicture'/> 
                               </div>
                                 <button onClick={(e) => {
                                   ImageSave();
                                   e.preventDefault();
-                                }}> 결과 확인 </button>
+                                }}> 결과 보기 </button>
                           </div>
                         </>
                       )}
 
-                      {!uploadedInfo&&(
+                      {!uploadedInfo&&( 
                         <>
-                          <div>사진 파일 선택</div>
+                          <div><h4>하늘 사진 파일 선택</h4></div>
                           <div><InputfileLogo/></div>
-                          <div>클릭 혹은 파일을 이곳에 드롭하세요.</div>
+                          <div><h4>클릭 혹은 파일을 이곳에 드롭하세요.</h4></div>
                         </>
                       )}
                 </label>
             </div>
               
             <div className='pictureInput_agree'>
-              <p>파일이 Sky to Solar서버에서 안전하게 처리됩니다.</p>
+              <p>파일이 Sky to Solar서버에서 안전하게 처리되며 저장되지 않고 삭제 됩니다.</p>
               <p>이 서비스를 사용하면 Sky to Solar <span>사용 약관</span>에 동의하게 됩니다.</p>
             </div>
           </div>
         </div>
       </section>
+     
     </div>
 
   );

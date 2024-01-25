@@ -1,7 +1,7 @@
 .header {
     height: 100px;
     box-sizing: border-box;
-    display: none;
+    width: 100%;
 }
 
 .headerWrap {
@@ -12,7 +12,6 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 1%;
     align-items: center;
-    position: fixed;
     background-color: white;
 }
 
@@ -25,30 +24,3 @@
     justify-self: center;
 }
 
-/* .headerNav {
-    justify-self: end;
-    grid-column: 3/4;
-    cursor: pointer;
-} */
-
-/* .headerStartBtt {
-    width: 180px;
-    height: 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 0;
-    background-color: #91A7D0;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s;
-    border-radius: 30px;
-}
-
-.headerStartBtt:hover {
-    background-color: #F6CAC9;
-    color: white;
-}
-
-.headerStartBtt:active {
-    opacity: 0.5;
-} */
