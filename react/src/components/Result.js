@@ -17,7 +17,7 @@ function Result() {
     const [subImg4, setSubImage4] = useState('');
     const [img, setImage] = useState('');
 
-     // 결과 페이지 실행 시 Selectpicture.js에서 저장한 sessionStorage 값을 useState 변수에 저장
+    // 결과 페이지 실행 시 Selectpicture.js에서 저장한 sessionStorage 값을 useState 변수에 저장
     useEffect(() => {
         setWat(window.sessionStorage.getItem("result"));
 	    setSubImage1(window.sessionStorage.getItem("subImagePath1"));
@@ -28,8 +28,8 @@ function Result() {
     },[]);
 
     // Category의 일사량 범위 계산
-    const wat_low = (wat-1)*500;
-    const wat_high = wat*500;
+    const wat_low = 0 < wat < 15 & wat != null? (wat-1)*500 : 0;
+    const wat_high = 0 < wat < 15 & wat != null? wat*500 : 0;
 
     // 충전 가능한 건전지 개수 범위 계산
     const battery_low = Math.round((1000*(wat_low*0.1*60)/1.5)/2850);
@@ -55,28 +55,27 @@ function Result() {
 
                 <div className="modal_container">
                     <div className="wrap_container">
-                            <div className="sub_container">
-                                <div className="sub_text">학습 결과와 유사한 데이터는 다음과 같아요.</div>
+                        <div className="sub_container">
+                            <div className="sub_text">학습 결과와 유사한 데이터는 다음과 같아요.</div>
 
-                                <div className="sub_image">
-                                    <div className="sub_image1">
-                                        <img src={subImg1} />
-                                    </div>
-                                 
-                                    <div className="sub_image1">
-                                        <img src={subImg2}/>
-                                    </div>
+                            <div className="sub_image">
+                                <div className="sub_image1">
+                                    <img src={subImg1} />
+                                </div>
+                                
+                                <div className="sub_image1">
+                                    <img src={subImg2}/>
+                                </div>
 
-                                    <div className="sub_image1">
-                                        <img src={subImg3} />
-                                    </div>
+                                <div className="sub_image1">
+                                    <img src={subImg3} />
+                                </div>
 
-                                    <div className="sub_image1">
-                                        <img src={subImg4} />
-                                    </div>
+                                <div className="sub_image1">
+                                    <img src={subImg4} />
                                 </div>
                             </div>
-                      
+                        </div>
 
                         <div className="result_container">
                             <div className="result_energy">
