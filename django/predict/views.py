@@ -35,7 +35,7 @@ def model_result(request):
         prediction = int(prediction)
 
         # Prediction이 나오게 된 유사 데이터 추출
-        for res in range(13):
+        for res in range(14):
             if res == prediction:
                 image_folder = "C:/git-push/solar/django/predict/static/images/category_"+str(res)
                 image_list = os.listdir(image_folder)
