@@ -1,10 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 
-// 스크롤 내리면 섹션에 애니메이션 라이브러리
-// import { useAnimation }  from "framer-motion";
-// import { useInView } from "react-intersection-observer";
-// import aos from 'aos';
-// import 'aos/dist/aos.css';
 import {Fade, Zoom, Slide} from 'react-reveal';
 
 
@@ -17,21 +12,13 @@ import main4Img from '../static/images/main4Img.jpg';
 import logo from '../static/images/logo.png';
 
 function Main() {
-    // const [mainNavSwitch, setMainNavSwitch] = useState(false);
+ 
     function btnClick(e){
         window.location.href="/Input"
     }
     
-    // 스크롤 내리면 섹션에 애니메이션 - aos 라이브러리
-    // useEffect(()=>{
-    //     aos.init({
-    //         once: true
-    //     });
-    // })
-
     return(
         <div className='app'>
-           {/* <MainApp></MainApp> */}
      
                 <FullPageScroll>
                     <div className="bg section">
