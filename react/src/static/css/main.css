@@ -63,7 +63,7 @@ strong {
     width: 800px;
     filter: brightness(0) invert(1);
     animation-name: main1Logo;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: both;
     animation-delay: 0.5s;
 }
@@ -81,9 +81,9 @@ strong {
     font-weight: bold;
     color: white;
     animation-name: main1content;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: both;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 @keyframes main1content {
     from {
@@ -106,8 +106,8 @@ strong {
     transition: 0.2s;
     border-radius: 30px;
     animation-name: main1StartBtt;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-delay: 1s;
     animation-fill-mode: both;
     opacity: 0;
     pointer-events: none;

@@ -60,28 +60,28 @@ function Main() {
                                 </Fade>
 
                                 <div className='main2Txtcontent scrollAnimation3'>
-                                    <Fade duration={2000} delay={1500}>
+                                    <Fade duration={2000} delay={1000}>
                                         <p>1. <strong>전천 사진을 촬영</strong>해요.</p>
                                         <br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={2000}>
+                                    <Fade duration={2000} delay={1250}>
                                         <p>2. <strong>이미지 프로세싱 처리</strong>를 해요.</p>
                                         <br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={2500}>
+                                    <Fade duration={2000} delay={1500}>
                                         <p>3. 위도, 경도, 일시를 이용하여 <strong>태양광 위치를 계산</strong>하고</p>
                                         <p>&nbsp;&nbsp;&nbsp;<strong>태양 주변 영역&#40;영역 1&#41;을 설정</strong>해요.</p>
                                         <br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={3000}>
+                                    <Fade duration={2000} delay={1750}>
                                         <p>4. <strong>영역별 운량을 계산</strong>해요.&#40;구름 픽셀수 / 전체 픽셀 수&#41;</p>
                                         <br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={3500}>
+                                    <Fade duration={2000} delay={2000}>
                                         <p>5. 영역 1의 운량에 <strong>가중치를 적용</strong>하고 수학식 5를 통해 <strong>전체 운량을 계산</strong>해요.</p>
                                         <br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={4000}>
+                                    <Fade duration={2000} delay={2250}>
                                         <p>6. 위도, 경도, 일시를 이용하여 <strong>청천공 일사량을 계산</strong>하고</p> 
                                         <p>&nbsp;&nbsp;&nbsp;<strong>상기 계산한 운량&#40;수학식 5&#41;과 일사량 공식&#40;수학식 3&#41;에 적용</strong>하여</p>
                                         <p>&nbsp;&nbsp;&nbsp;<strong>일사량을 추정</strong>해요.</p>
@@ -102,16 +102,16 @@ function Main() {
                                     </div>
                                 </Fade>
                                 <div className='main3Txtcontent'>
-                                    <Fade duration={2000} delay={1500}>
+                                    <Fade duration={2000} delay={1000}>
                                         <p>태양의 <strong>빛 에너지</strong>를 <strong>광전효과</strong>를 통해 <strong>전기 에너지</strong>로 변환한 에너지예요.<br/></p>
                                         <br/><br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={2000}>
+                                    <Fade duration={2000} delay={1250}>
                                         <p>태양광 에너지를 만들기 위한 태양광 발전의 종류로는</p>
                                         <p><strong>계통연계형</strong>, <strong>독립형</strong>, <strong>하이브리드&#40;계통연계형 + 독립형&#41;</strong>가 있어요.<br/></p>
                                         <br/><br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={2500}>
+                                    <Fade duration={2000} delay={1500}>
                                         <p>또한 태양광 에너지는</p>
                                         <p><strong>장소 제한↓</strong>, <strong>연료비 x</strong>, <strong>수명↑</strong>, <strong>자동화 o</strong>, <strong>유지&middot;보수 용이</strong>라는 장점이 있답니다.<br/></p>
                                     </Fade>
@@ -141,31 +141,25 @@ function Main() {
                                     </div>
                                 </Fade>
                                 <div className='main4TxtContent'>
-                                    <Fade duration={2000} delay={1500}>
+                                    <Fade duration={2000} delay={1000}>
                                         <p>야외활동에서 전기가 필요한데 전선이 없다면,</p>
                                         <br/>
-                                    </Fade>
-                                    <Fade duration={2000} delay={2000}>
                                         <p><strong>→ 태양광 핸드폰 충전기</strong>, <strong>태양광 우산</strong>, <strong>태양광 핸드백</strong></p>
                                         <br/><br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={2500}>
+                                    <Fade duration={2000} delay={1250}>
                                         <p>독립형 태양광 조명장치로,</p>
                                         <br/>
-                                    </Fade>
-                                    <Fade duration={2000} delay={3000}>
                                         <p><strong>→ 지하등</strong>, <strong>수상등</strong>, <strong>가로등</strong>, <strong>경광등</strong></p>
                                         <br/><br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={3500}>
+                                    <Fade duration={2000} delay={1500}>
                                         <p>태양광을 이용하여 도로 표시에 사용되는,</p>
                                         <br/>
-                                    </Fade>
-                                    <Fade duration={2000} delay={4000}>
                                         <p><strong>→ 교통 신호등</strong>, <strong>도로 표지등</strong>, <strong>일반 경고등</strong></p>
                                         <br/><br/>
                                     </Fade>
-                                    <Fade duration={2000} delay={4500}>
+                                    <Fade duration={2000} delay={1750}>
                                         <p>이 외에도 <strong>태양광 에너지</strong>는 <strong>어느 곳에서나 다양하게</strong> 쓰이고 있어요.</p>
                                     </Fade>
                                 </div>
@@ -176,12 +170,12 @@ function Main() {
                     <div className="bg section">
                         <Fade duration={2000}>
                         <div className='main5 mainMargin mainContainer'>
-                            <Fade duration={2000} delay={1000}>
+                            <Fade duration={2000} delay={500}>
                                 <div className='main5Txt'>
                                     지금 하늘 사진을 업로드해보세요
                                 </div>
                             </Fade>
-                            <Fade duration={2000} delay={1500}>
+                            <Fade duration={2000} delay={500}>
                                 <button className='main5StartBtt' onClick={btnClick}>시작하기</button>
                             </Fade>
                         </div>

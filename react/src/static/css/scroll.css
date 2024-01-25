@@ -27,8 +27,8 @@ align-items: center;
 justify-content: center;
 color: white;
 animation-name: scrolldown_Btn;
-animation-duration: 3s;
-animation-delay: 4s;
+animation-duration: 2s;
+animation-delay: 1.5s;
 animation-fill-mode: both;
 }
 @keyframes scrolldown_Btn {
