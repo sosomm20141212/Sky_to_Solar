@@ -23,24 +23,28 @@ def model_predict(image_np_array):
 
     return prediction
 
-# React에서
+# React에서 return 요청을 받으면 딥러닝 모델을 돌리고 필요한 데이터 전송
 @csrf_exempt
 def model_result(request):
     if request.method == 'POST':
+        # Request를 받아서 모델 돌리는 과정
         image_file = request.FILES['file']
         image_np_array = cv.imdecode(np.frombuffer(image_file.read(), np.uint8), cv.IMREAD_COLOR)
 
         prediction = model_predict(image_np_array)
         prediction = int(prediction)
 
+        # Prediction이 나오게 된 유사 데이터 추출
         for res in range(13):
             if res == prediction:
                 image_folder = "C:/git-push/solar/django/predict/static/images/category_"+str(res)
                 image_list = os.listdir(image_folder)
                 image_paths = [os.path.join("http://10.10.21.64:8000/static/images/category_"+str(res), img) for img in image_list]
 
+                # Prediction과 유사 데이터 Return
                 return JsonResponse({"result":prediction, "image_paths":image_paths})
-    return JsonResponse({'error': 'eeeeeeeeeeeeeeeeeeror'})
+    # Request에 오류 발생 시 에러 반환
+    return JsonResponse({'error': 'Request Error'})
 
 
 

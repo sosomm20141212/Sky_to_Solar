@@ -25,6 +25,7 @@ SECRET_KEY = "django-insecure-_hd3s4kaojg(ac-rr&tx54(6#s3$%6@1xc^si172y%b_u)1r=!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# 접속 가능한 주소 세팅
 ALLOWED_HOSTS = ['10.10.21.64', 'localhost']
 
 
@@ -38,10 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "predict",
+    # CORS 세팅
     'corsheaders'
 ]
 
 MIDDLEWARE = [
+    # CORS 세팅(2줄)
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     "django.middleware.security.SecurityMiddleware",
@@ -53,6 +56,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# CORS 세팅
 CORS_ORIGIN_WHITELIST = (
     'http://10.10.21.64:8000', 'http://10.10.21.64:3000', 'http://localhost:3000')
 CORS_ALLOW_CREDENTIALS = True
@@ -81,6 +85,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DB 접속 세팅(현재 사용 X)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

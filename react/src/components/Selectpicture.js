@@ -15,8 +15,9 @@ function Selectpicture() {
   const handleDragstart = () => setActive(true);
   const handleDragEnd = () => setActive(false);
   const [uploadedInfo, setUploadedInfo] = useState(null); // 미리보기 이미지의 데이터
-  const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터 
+  const [storeFile,setStoreFile] = useState(null); // 저장할 이미지의 데이터
   
+  // 업로드 페이지 실행 시 sessionStorage 초기화
   useEffect(() => {
     window.sessionStorage.clear();
   })
@@ -30,7 +31,7 @@ function Selectpicture() {
     // console.log(e);
     e.preventDefault();
     setActive(false);
-    const file = e.dataTransfer.files[0]; 
+    const file = e.dataTransfer.files[0];
     setFileInfo(file);
     setStoreFile(file);
     console.log(e.dataTransfer);
@@ -107,15 +108,18 @@ function Selectpicture() {
       console.log(...data);
       // await axios.post("/image",data);
 
+      // Django에 설정한 주소로 image 데이터를 전송하여 필요한 데이터 return 요청
       const response = await axios.post("http://10.10.21.64:8000/api/result",data,{
         headers:{
           "Content-Type": "multipart/form-data",
         },
       });
+      // Return받은 데이터를 변수에 저장
       const result = response.data.result;
       const imagePaths = response.data.image_paths;
       const imageUrl = uploadedInfo.imageUrl;
 
+      // Return값을 다른 페이지에서도 사용하기 위해서 sessionStorage에 저장
       window.sessionStorage.setItem("result",result);
       window.sessionStorage.setItem("subImagePath1",imagePaths[0]);
       window.sessionStorage.setItem("subImagePath2",imagePaths[1]);
@@ -123,10 +127,12 @@ function Selectpicture() {
       window.sessionStorage.setItem("subImagePath4",imagePaths[3]);
       window.sessionStorage.setItem("imageUrl",imageUrl);
       
+      // 위의 과정이 끝나면 결과 페이지로 이동
       window.location.href="/result";
     }
     catch (e) {
-      console.error("1",e);
+      // Data 전송 또는 return에 문제 발생 시 콘솔에 에러 메시지 기록
+      console.error("Return Error",e);
       throw e;
     }
   };
@@ -147,13 +153,13 @@ function Selectpicture() {
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}>
 
-                <label> 
+                <label>
                   <input key = {uploadedInfo} id="fileUpload" type='file' accept="image/*" onChange={handleUpload}/>
-                      {uploadedInfo &&( 
+                      {uploadedInfo &&(
                         <>
                           <div className="preview_info">
                               <div>
-                                <img src = {uploadedInfo.imageUrl} className='showPicture'/> 
+                                <img src = {uploadedInfo.imageUrl} className='showPicture'/>
                               </div>
                                 <button onClick={(e) => {
                                   ImageSave();
@@ -163,7 +169,7 @@ function Selectpicture() {
                         </>
                       )}
 
-                      {!uploadedInfo&&( 
+                      {!uploadedInfo&&(
                         <>
                           <div>사진 파일 선택</div>
                           <div><InputfileLogo/></div>
@@ -180,7 +186,6 @@ function Selectpicture() {
           </div>
         </div>
       </section>
-     
     </div>
 
   );
