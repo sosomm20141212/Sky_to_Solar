@@ -31,7 +31,7 @@ def model_result(request):
         image_file = request.FILES['file']
         image_np_array = cv.imdecode(np.frombuffer(image_file.read(), np.uint8), cv.IMREAD_COLOR)
 
-        prediction = model_predict(image_np_array)
+        prediction = model_predict(image_np_array) + 1
         prediction = int(prediction)
 
         # Prediction이 나오게 된 유사 데이터 추출
