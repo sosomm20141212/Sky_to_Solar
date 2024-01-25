@@ -1,9 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Gowun+Dodum&family=Single+Day&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gasoek+One&family=Gowun+Dodum&family=Single+Day&display=swap');
 
-* {
-    /* border: 1px solid black; */
-}
+
 
 /* main3 애니메이션 - 가로 스크롤바 없애기 */
 ::-webkit-scrollbar {
@@ -13,14 +10,6 @@
 strong {
     font-size: 1.69rem;
 }
-
-/* .main {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Gowun Dodum', sans-serif;
-} */
 
 .main1 {
     width: 100%;
@@ -46,18 +35,6 @@ strong {
 .main1 > * {
     margin: 3% 0;
 }
-
-/* .main1::before {
-    background-image: url('../images/main1BackgroundImg.jpg');
-    background-size: 100% 90vh;
-    content: '';
-    opacity: 0.5;
-    position: absolute;
-    top: 100px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-} */
 
 .main1Logo {
     width: 800px;
@@ -124,14 +101,6 @@ strong {
     background-color: #F6CAC9;
     color: white;
 }
-
-/* .mainWrap {
-    width: 1400px;
-} */
-
-/* .mainMargin {
-    margin: 100px 0 0 0;
-} */
 
 .main2 {
     width: 100%;
@@ -429,7 +398,6 @@ strong {
   }
 
 /* 메인텍스트4번 */
-
 .main4TxtTitle,.main4TxtTitle1Point,.main4TxtTitle2Point{
     white-space: nowrap;
     overflow-wrap: break-word;

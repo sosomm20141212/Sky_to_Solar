@@ -169,7 +169,7 @@ function Selectpicture() {
       <section>
         <div className='select_box'>
           <div>
-            <h2>태양광 에너지 생산량 예측</h2>
+            <h2 id="select_title">태양광 에너지 생산량 예측</h2>
           </div>
         
 
