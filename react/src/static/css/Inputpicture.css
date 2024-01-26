@@ -24,6 +24,9 @@
     width: 300px;
     height: 150px;
     border-radius: 12px;
+    background-image: url("https://storage.googleapis.com/kaggle-datasets-images/2889089/4981421/859e595f270ce579c4875676851b0fd2/dataset-cover.jpg?t=2023-02-13-18-55-24");
+    background-position: center;
+    background-size: contain;
 }
 .howtoInput_imgUrl{
     display: flex;

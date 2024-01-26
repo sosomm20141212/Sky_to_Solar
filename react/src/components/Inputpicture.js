@@ -1,8 +1,8 @@
 import React from 'react';
 import '../static/css/Inputpicture.css';
-import Selectpicture from './Selectpicture';
 import Footer from './Footer';
 import Header from './Header';
+import Selectpicture from './Selectpicture';
 
 function Inputpicture() {
   return (
@@ -35,7 +35,7 @@ function Inputpicture() {
             <div className='howtoInput_footer'>
               <div className='howtoInput_image'>
                     <picture>
-                      <img id="howtoInput_imgex" src ="https://storage.googleapis.com/kaggle-datasets-images/2889089/4981421/859e595f270ce579c4875676851b0fd2/dataset-cover.jpg?t=2023-02-13-18-55-24" />
+                      <div id="howtoInput_imgex"/>
                     </picture>
               </div>
 
