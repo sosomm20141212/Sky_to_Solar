@@ -70,7 +70,7 @@ function Main() {
                                     </Fade>
                                     <Fade duration={2000} delay={1500}>
                                         <p>3. 위도, 경도, 일시를 이용하여 <strong>태양광 위치를 계산</strong>하고</p>
-                                        <p>&nbsp;&nbsp;&nbsp;<strong>태양 주변 영역&#40;영역 1&#41;을 설정</strong>해요.</p>
+                                        <p>&nbsp;&nbsp;&nbsp;<strong>태양 주변 영역을 설정</strong>해요.</p>
                                         <br/>
                                     </Fade>
                                     <Fade duration={2000} delay={1750}>
@@ -78,13 +78,12 @@ function Main() {
                                         <br/>
                                     </Fade>
                                     <Fade duration={2000} delay={2000}>
-                                        <p>5. 영역 1의 운량에 <strong>가중치를 적용</strong>하고 수학식 5를 통해 <strong>전체 운량을 계산</strong>해요.</p>
+                                        <p>5. 영역별 운량에 <strong>가중치를 적용</strong>하고 <strong>전체 운량을 계산</strong>해요.</p>
                                         <br/>
                                     </Fade>
                                     <Fade duration={2000} delay={2250}>
                                         <p>6. 위도, 경도, 일시를 이용하여 <strong>청천공 일사량을 계산</strong>하고</p> 
-                                        <p>&nbsp;&nbsp;&nbsp;<strong>상기 계산한 운량&#40;수학식 5&#41;과 일사량 공식&#40;수학식 3&#41;에 적용</strong>하여</p>
-                                        <p>&nbsp;&nbsp;&nbsp;<strong>일사량을 추정</strong>해요.</p>
+                                        <p>&nbsp;&nbsp;&nbsp;<strong>상기 계산한 운량과 일사량 공식에 적용</strong>하여 일사량을 추정해요.</p>
                                     </Fade>
                                 </div>
                             </div>
